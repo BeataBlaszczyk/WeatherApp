@@ -15,7 +15,7 @@ app.use(express.static("public"));
 
 app.get("/", function(req, res) {
 
-  res.render("index", {
+  res.render("home", {
     cityName: "",
     description: "",
     source: "",//"/images/img.png",
