@@ -32,7 +32,7 @@ app.post("/", function(req, res) {
 
   https.get(url, function(response) {
     console.log(response.statusCode);
-
+if (response.statusCode===200){
     response.on("data", function(data) {
       const weatherData = JSON.parse(data);
       const temp = weatherData.main.temp;
@@ -49,12 +49,25 @@ app.post("/", function(req, res) {
 
 
     });
+
+  }else{
+    res.render("homeErr", {
+      cityName: "",
+      description: "Please make sure you wrote the city name correctly.",
+      source: "",
+      temp: "Ther's no city like: " + query
+});
+  }
+
   });
 
 
 });
 
+let port = process.env.PORT;
 
-app.listen(3000, function() {
+if (!port) port=3000;
+
+app.listen(port, function() {
 console.log("Server is running on port 3000")
 })
