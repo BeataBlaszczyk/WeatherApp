@@ -2,7 +2,7 @@ img {
   min-height: 150%;
 }
 
-.grid2 {
+.grid2, .grid2err {
   display: grid;
   justify-content: center;
   align-items: center;
@@ -12,9 +12,18 @@ img {
   min-width: 260px;
   height: 88vh;
 }
-.grid2 > * {
+.grid2 > *, .grid2err > * {
   align-self: center;
   justify-self: center;
+}
+
+.err {
+  color: red;
+  text-decoration: underline;
+}
+
+.grid2err {
+  grid-template-rows: 15% 3% 45% 25% 12% !important;
 }
 
 body {
@@ -55,6 +64,7 @@ h1 {
   font-size: 8vh;
   padding-left: 5px;
   padding-right: 5px;
+  text-align: center;
 }
 
 h4 {
@@ -80,12 +90,14 @@ button {
   border: 2px solid black;
   box-sizing: border-box;
   padding: 0.3rem;
+  z-index: 1;
 }
 button:hover {
   box-shadow: 0 0 10px black;
 }
 
 input {
+  text-transform: capitalize;
   color: black;
   text-align: center;
   font-weight: 300;
@@ -101,6 +113,7 @@ input {
   border: 2px solid black;
   box-sizing: border-box;
   padding: 0.3rem;
+  z-index: 1;
   font-size: 2rem !important;
 }
 input::placeholder {

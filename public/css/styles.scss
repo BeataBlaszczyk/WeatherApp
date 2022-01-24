@@ -1,8 +1,10 @@
 
 img{
   min-height: 150%;
+
 }
-.grid2{
+
+.grid2, .grid2err{
   display: grid;
   justify-content: center;
   align-items: center;
@@ -16,6 +18,14 @@ img{
     align-self: center;
   justify-self: center;
   }
+}
+
+.err{
+  color: red;
+  text-decoration: underline;
+}
+.grid2err{
+  grid-template-rows:  15% 3% 45% 25% 12%!important;
 }
 
 //$colorEl: #DFD3C3
@@ -73,6 +83,7 @@ h1{
   font-size: 8vh;
   padding-left: 5px;
   padding-right: 5px;
+  text-align: center;
 
 }
 h4{
@@ -100,6 +111,7 @@ min-width: 260px;
   border: 2px solid $colorFont;
   box-sizing: border-box;
   padding: 0.3rem;
+  z-index: 1;
 }
 
 @mixin input(){
@@ -120,6 +132,7 @@ button{
 }
 
 input{
+  text-transform: capitalize;
   @include input();
   max-width: 600px!important;
   &::placeholder{
