@@ -1,0 +1,112 @@
+img {
+  min-height: 150%;
+}
+
+.grid2 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 15% 45% 15% 13% 12%;
+  width: 40vw;
+  max-width: 400px;
+  min-width: 260px;
+  height: 88vh;
+}
+.grid2 > * {
+  align-self: center;
+  justify-self: center;
+}
+
+body {
+  width: 98vw;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+fieldset {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 88vh;
+  min-height: 5vh;
+  background-color: #325288;
+  box-shadow: 0 0 10px #325288;
+  width: 80vw;
+}
+
+form {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  height: 88vh;
+  font-size: 1.5rem;
+}
+form > * {
+  margin: 1vh;
+}
+
+h1 {
+  margin: 0;
+  font-size: 8vh;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+h4 {
+  text-align: center;
+  font-size: 4vmin;
+  font-weight: 300;
+  padding: 10px;
+  margin: 0;
+  max-width: 400px;
+  min-width: 260px;
+}
+
+button {
+  text-shadow: 0 0 10px #FAEEE7;
+  background-color: #FAEEE7;
+  color: black;
+  font-weight: 900;
+  border-radius: 10px;
+  width: 80vw;
+  max-width: 400px;
+  min-width: 260px;
+  font-size: 1rem;
+  border: 2px solid black;
+  box-sizing: border-box;
+  padding: 0.3rem;
+}
+button:hover {
+  box-shadow: 0 0 10px black;
+}
+
+input {
+  color: black;
+  text-align: center;
+  font-weight: 300;
+  max-width: 600px !important;
+  background-color: #FAEEE7;
+  color: black;
+  font-weight: 900;
+  border-radius: 10px;
+  width: 80vw;
+  max-width: 400px;
+  min-width: 260px;
+  font-size: 1rem;
+  border: 2px solid black;
+  box-sizing: border-box;
+  padding: 0.3rem;
+  font-size: 2rem !important;
+}
+input::placeholder {
+  color: black;
+  text-align: center;
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=styles.css.map */
