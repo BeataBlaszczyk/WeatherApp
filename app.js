@@ -12,9 +12,10 @@ app.use(bodyParser.urlencoded({
 
 
 app.use(express.static("public"));
+
 app.get("/", function(req, res) {
 
-  res.render("home", {
+  res.render("index", {
     cityName: "",
     description: "",
     source: "",//"/images/img.png",
